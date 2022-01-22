@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import utility.Base;
@@ -13,12 +14,13 @@ import pageObjects.LandingPage;
 import pageObjects.VerifyPhonenumberPage;
 
 public class PasswordMatchTest extends Base {
-	public WebDriver driver;
+	WebDriver driver;
 	
 	@Test
 	public void passwordMatch() throws IOException {	
 		driver = run();
 		driver.get(prop.getProperty("url"));
+	
 		LandingPage lp = new LandingPage(driver);
 		lp.getFirstname().sendKeys("first name");
 		lp.getLastname().sendKeys("last name");
@@ -33,12 +35,16 @@ public class PasswordMatchTest extends Base {
 		WebDriverWait wait = new WebDriverWait(driver, 50);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(vp.heading));
 		Assert.assertEquals("Verify your phone number", vp.getHeading().getText());
-
+	
 	
 	}
 
 	
-
+	@AfterTest
+	public void teardown() {
+		
+		driver.quit();
+	}
 	
 	
 	

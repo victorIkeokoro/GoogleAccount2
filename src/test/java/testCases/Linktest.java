@@ -6,7 +6,9 @@ import java.util.List;
 
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -14,12 +16,13 @@ import pageObjects.LandingPage;
 import utility.Base;
 public class Linktest extends Base{
 	
-	
+	WebDriver driver;
 	@Test
 	public void link () throws IOException, InterruptedException {
 		
 		driver = run();
 		driver.get(prop.getProperty("url"));
+	
 		LandingPage lp = new LandingPage(driver);
 		List<WebElement> links= lp.getLinks();
 		String clickonLink = Keys.chord(Keys.CONTROL, Keys.ENTER);
@@ -36,9 +39,13 @@ public class Linktest extends Base{
 	      }
 	      a.assertAll();
 	     
-			
+	   
 		}
+	@AfterTest
+	public void teardown() {
 		
+		driver.quit();
+	}
 	}
 
 

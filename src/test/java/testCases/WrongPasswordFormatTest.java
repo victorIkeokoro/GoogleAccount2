@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import utility.Base;
@@ -13,12 +14,13 @@ import pageObjects.LandingPage;
 import pageObjects.VerifyPhonenumberPage;
 
 public class WrongPasswordFormatTest extends Base {
-	public WebDriver driver;
+	WebDriver driver;
 
 	@Test
 	public void WrongPasswordFormat  () throws IOException {
 		driver = run();
 		driver.get(prop.getProperty("url"));
+		
 		LandingPage lp = new LandingPage(driver);
 		lp.getFirstname().sendKeys("first name");
 		lp.getLastname().sendKeys("last name");
@@ -31,7 +33,12 @@ public class WrongPasswordFormatTest extends Base {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(lp.passwordErrorMsg));
 		Assert.assertTrue(lp.getPasswordErrorMsg().isDisplayed());
+	
+	}
+	@AfterTest
+	public void teardown() {
 		
+		driver.quit();
 	}
 }
 

@@ -3,22 +3,28 @@
 <suite name="Suite">
 <listeners>
 <listener class-name="utility.Listens"/>
-
-
 </listeners>
-  <test thread-count="5" name="Test"   parallel="classes">
-    <classes >
+  <test thread-count="5" name="Test" parallel ="classes">
+    <classes>
       <class name="testCases.InputboxTest"/>
-      <class name="testCases.Linktest"/>
-      <class name="testCases.ShowPasswordTest"/>
-      <class name="testCases.SigninTest"/>
-      <class name="testCases.PasswordMatchTest"/>
-      <class name="testCases.emailInputTest"/>
+     <class name="testCases.emailInputTest"/>
+       <class name="testCases.LandingPageTest"/>
+    <class name="testCases.PasswordMatchTest"/>
+     
       <class name="testCases.NextButtonTest"/>
       <class name="testCases.WrongPasswordFormatTest"/>
       <class name="utility.Base"/>
       <class name="testCases.NewGmailTest"/>
       <class name="testCases.PasswordMismatchTest"/>
+  
+    <class name="testCases.Linktest"/>
+      <class name="testCases.ShowPasswordTest"/>
+      <class name="testCases.SigninTest"/>
     </classes>
-  </test> <!-- Test -->
+  </test> <!-- 
+  
+ 
+  
+  
+  Test -->
 </suite> <!-- Suite -->

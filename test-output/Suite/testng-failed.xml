@@ -6,11 +6,24 @@
   </listeners>
   <test thread-count="5" parallel="classes" name="Test(failed)">
     <classes>
-      <class name="testCases.WrongPasswordFormatTest">
+      <class name="testCases.InputboxTest">
         <methods>
-          <include name="WrongPasswordFormat"/>
+          <include name="inputbox"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- testCases.WrongPasswordFormatTest -->
+      </class> <!-- testCases.InputboxTest -->
+      <class name="testCases.LandingPageTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="landingpage"/>
+        </methods>
+      </class> <!-- testCases.LandingPageTest -->
+      <class name="testCases.emailInputTest">
+        <methods>
+          <include name="emailWrongInput"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- testCases.emailInputTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
