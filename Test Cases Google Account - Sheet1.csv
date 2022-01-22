@@ -1,0 +1,57 @@
+URL:,https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp,,,,,,
+Test Case ID,Test Scenario,Test Objective,Test Case Title,Pre-requisites,Test Steps,Test Data,Expected Result (ER)
+,,,,,,,
+TC_RF_001,"
+Check the Inputbox Functionality","To test the application behaviour 
+when an invalid email format is inputted.",EmailInputTest,1. Open the Application in any Browser,"1. Open the Url
+2. Navigate to the username input box
+3. Click the Enter button","email input
+","An error message should be displayed 
+below the username input box."
+TC_RF_002,"
+Check the Inputbox Functionality","To test if all the input boxes 
+can recieve user input.",inputboxTest,1. Open the Application in any Browser,"1. Open the Url
+2. Navigate to the input box 
+3.Enter text into the input box",Text input,The input box should accept the user inputs.
+TC_RF_003,,"To test if the user is navigates to the right page
+after enter the URL ",LandingPageTest,1. Open the Application in any Browser,1. Open the Url,Not Applicable,"The user should be navigates to 
+Create google account page"
+TC_RF_004,Check the  Link Functionality,"To verify that all the links on the page
+are functioning properly(not  broken)",Linktest,"1. Open the Application in any Browser
+
+","1. Open the Application in any Browser 
+2. Click on the links on the page",Not Applicable,"The response code for each link should 
+be less than 400."
+TC_RF_005,,"To check system behaviour when the
+""Use my current email address instead"" text is clicked.",NewGmailTest,1. Open the Application in any Browser,"1. Open the Application in any Browser 
+2. Click on the""Use my current email address instead"" text ",Not Applicable,"The user should be able to enter their 
+current email instead"
+TC_RF_005,Check the Button Functionality,"To check System behaviour when the
+""Next"" button is clicked.",NextButtonTest,"1. Open the Application in any Browser
+","1. Open the Application in any Browser
+2.Fill the required information(Firstname,Lastname,Username and pasword)",Not Applicable,"The user should be navigated to the 
+confirm phone number page."
+TC_RF_006,Check the Password Functionality,"Check System behaviour when 
+the user enter correct password format that matches
+ the confirm passowrd input
+",PasswordMatchTest,"1. Open the Application in any Browser","1. Open the Application in any Browser
+2.Fill the required information(Firstname,Lastname,Username and pasword)",Not Applicable,"The user should be navigated to the 
+confirm phone number page."
+TC_RF_007,Check the Password Functionality,"Check System behaviour when 
+the user enter correct password format that 
+does not match the confirm passowrd input
+",PasswordMisMatchTest,"1. Open the Application in any Browser","1. Open the Application in any Browser
+2.Fill the required information(Firstname,Lastname,Username and pasword)",Not Applicable,"An error message should be displayed 
+below the password input box."
+TC_RF_008,Check the Password Functionality,"To check system behaviour when the 
+checkbox is clicked to hide and unhide password.",ShowPasswordTest,"1. Open the Application in any Browser","1. Open the Application in any Browser
+2.Fill the required information(Firstname,Lastname,Username and pasword)",Not Applicable,"The password should unhide when the checkbox 
+is first clicked then hide when it is clicked again and that cycle should repeat itself."
+TC_RF_009,Check the Password Functionality,"Check System behaviour when 
+the user enter Incorrect password format ",WrongPasswordFormat,"1. Open the Application in any Browser","1. Open the Application in any Browser
+2.Fill the required information(Firstname,Lastname,Username and pasword)",Not Applicable,"An error message should be displayed 
+below the password input box."
+TC_RF_010,Check the Signin Functionality,"Check sytem behaviour when a user
+tries to signin into an existing google account",SigninTest,"1. Open the Application in any Browser","1. Open the Application in any Browser
+2.Clck the ""Signin instead "" text",Not Applicable,"The user should be navigated to the 
+Sign in into google account page."
